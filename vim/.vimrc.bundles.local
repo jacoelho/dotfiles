@@ -1,2 +1,1 @@
-Bundle 'fatih/vim-go'
-Bundle 'derekwyatt/vim-scala'
+Bundle 'glidenote/serverspec-snippets'

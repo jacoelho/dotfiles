@@ -1,0 +1,7 @@
+let g:spf13_bundle_groups=['general', 'neocomplete', 'programming', 'ruby', 'python', 'go', 'javascript', 'html', 'misc', 'writing' ]
+
+" setting example
+let g:neosnippet#snippets_directory = [
+      \'~/.vim/bundle/vim-snippets/snippets',
+      \'~/.vim/bundle/serverspec-snippets',
+      \]

@@ -1,5 +1,8 @@
 colorscheme molokai_dark
 
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'javascript', 'twig', 'html', 'misc']
+
+
 set modeline
 
 set listchars=tab:▸\ ,eol:¬
@@ -23,3 +26,4 @@ if isdirectory(expand("~/.vim/bundle/tabular"))
     vmap <Leader>as :Tabularize /^\s*\w*<CR>
 endif
 " }
+
