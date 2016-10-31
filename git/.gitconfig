@@ -31,7 +31,7 @@
 [alias]
     squash  = "!f() { git commit --squash $(git rev-parse --abbrev-ref HEAD); }; f"
     squash2 = "!f() { git commit --squash $(git rev-parse --abbrev-ref HEAD) && git rebase -i --autosquash \"${1:-master}\" ; }; f"
-    com     = "!f() { git commit -em \"[refs $(git rev-parse --abbrev-ref HEAD|cut -d'/' -f2-)] $*\"; }; f"
+    com     = "!f() { git commit -em \"[$(git rev-parse --abbrev-ref HEAD|cut -d'/' -f2-)] $*\"; }; f"
     tag-gps = "!f() { git tag $(date +'v%Y%m%d-%H%M') && git push --tags; }; f"
 [rebase]
     autosquash = true
