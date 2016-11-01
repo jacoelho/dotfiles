@@ -1,12 +1,12 @@
 colorscheme molokai_dark
 
-let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'javascript', 'twig', 'html', 'misc']
-
-
 set modeline
 
 set listchars=tab:▸\ ,eol:¬
 let g:indent_guides_enable_on_vim_startup = 0
+
+" fix snippet expand
+inoremap <expr><CR> neosnippet#expandable() ? neosnippet#mappings#expand_or_jump_impl() : pumvisible() ? neocomplete#close_popup() : "\<CR>"
 
 let g:go_fmt_command = "goimports"
 
@@ -25,5 +25,10 @@ if isdirectory(expand("~/.vim/bundle/tabular"))
     nmap <Leader>as :Tabularize /^\s*\w*<CR>
     vmap <Leader>as :Tabularize /^\s*\w*<CR>
 endif
-" }
 
+let g:neosnippet#scope_aliases = {}
+let g:neosnippet#scope_aliases['ruby'] = 'ruby,ruby.serverspec'
+let g:neosnippet#snippets_directory = [
+      \'~/.vim/bundle/vim-snippets/snippets',
+      \'~/.vim/bundle/serverspec-snippets',
+      \]
