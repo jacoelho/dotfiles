@@ -35,3 +35,5 @@
     tag-gps = "!f() { git tag $(date +'v%Y%m%d-%H%M') && git push --tags; }; f"
 [rebase]
     autosquash = true
+[core]
+	editor = vim
